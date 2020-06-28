@@ -1,6 +1,6 @@
 # DataScienceBooks
 
-: Repository containing awesome data science books with quizes/examples open for everybody! 
+Repository containing awesome data science books with quizes/examples open for everybody! 
 
 
 ## Books Covered
