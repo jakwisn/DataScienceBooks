@@ -13,6 +13,8 @@ Repository containing awesome data science books with quizzes/examples open for 
 
 source: [Advanced R](https://adv-r.hadley.nz/)
 
+[go to quizes](https://github.com/jakwisn/DataScienceBooks/tree/master/AdvancedR)
+
 
 
 
