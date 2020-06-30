@@ -1,0 +1,113 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Advanced R 
+## chapter 2
+
+In this quiz some questions might have multiple answers.
+
+### 1
+
+In code below when R is making copy of object bind to `a`
+```{r, echo=TRUE, eval=FALSE}
+a <- c(1, 5, 3, 2)
+b <- a
+b[[1]] <- 10
+```
+
+```{r question_1}
+quiz(
+  question("In code above when R is making copy of object `a`",
+    answer("while asigning it to b"),
+    answer("while modifying it", correct = TRUE))
+)
+```
+
+### 2 
+
+```{r question_2}
+quiz(
+  question("What is valid name for object in R?",
+    answer("`object_`", correct = TRUE),
+    answer("`function`"),
+    answer("`1a`"),
+    answer("`_object_`"),
+    answer("It is posible with all of above after surrounding them with backticks", correct = TRUE))
+)
+```
+
+### 3 
+
+Lets say we have this vector:
+```{r, echo = TRUE}
+x <- c("a","a","bda", "bdb", "ddd", "a")
+```
+
+
+```{r question_3}
+quiz(
+  question("How to best visualize something called global string pool",
+    answer("ref(x)"),
+    answer("ref(x, character = TRUE)", correct = TRUE),
+    answer("tracemem(x)"),
+    answer("untracemem(x)"))
+)
+```
+
+
+### 4
+
+
+
+```{r question_4}
+quiz(
+  question("Imagine situation when some non empty, big data frame has binding for 2 names d1 and d2. Select TRUE statement :",
+    answer("By modifying one column in d1 only this column will change list reference, the rest of references won't change", correct = TRUE),
+    answer("By modifying one row in d1 only this row will change list reference, the rest of references won't change"), 
+    answer("If we modify one row of d1, whole dataframe will be copied", correct = TRUE), 
+    answer("If we modify one column of d1, whole dataframe will be copied")) 
+    
+)
+```
+
+### 5 
+
+Look at these objects and answer questions
+
+```{r, echo=TRUE}
+x <- list(a = 1, b = 2, c = 3)
+y <- list(x, x, x)
+z <- c(1:100000)
+```
+
+
+```{r question_5}
+quiz(
+  question("What statements are TRUE",
+    answer("y size is 3 times x's size"),
+    answer("obj_size(z) is the same as obj_size(1:1000000"),
+    answer("obj_size(1:1000000) is example of alternative representation", correct = TRUE),
+    answer("running obj_size(1:1000000) will give really low size (comparable to y)", correct = TRUE ))
+)
+```
+
+### 6 
+
+```{r question_6}
+quiz(
+  question("What statements are TRUE",
+    answer("objects with single binding are modified in place", correct = TRUE ),
+    answer("if two bindings reference to one environment and we modify it by accesing from first name, for the second binding environment won't change"),
+    answer("Garbage collector is autonomous and it's behaviour is hard to predict", correct = TRUE ))
+)
+```
+
+
